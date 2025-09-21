@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kawasaki Ninja H2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Fondo futurista */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #eee;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Título futurista */
+    .page-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      font-weight: 700;
+      text-align: center;
+      margin: 20px 0;
+      text-transform: uppercase;
+      color: #00ffe5;
+      text-shadow: 0 0 8px #00ffe5, 0 0 16px rgba(0, 255, 229, 0.6);
+      letter-spacing: 3px;
+    }
+
+    .container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      align-items: center;
+      justify-items: center;
+      gap: 20px;
+      padding: 20px;
+      height: calc(100vh - 80px);
+    }
+
+    /* Panel con efecto glassmorphism */
+    .info-panel {
+      width: 100%;
+      max-height: 90%;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow-y: auto;
+      animation: fadeIn 1s ease;
+    }
+
+    /* Tarjetitas dentro del panel */
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.1em;
+      margin-top: 0;
+      color: #00ffe5;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 6px rgba(0,255,229,0.7);
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.95em;
+      line-height: 1.4;
+      color: #ddd;
+    }
+
+    /* Modelo 3D */
+    .sketchfab-embed-wrapper {
+      width: 100%;
+      height: 85vh;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .sketchfab-embed-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Animación suave */
+    @keyframes fadeIn {
+      from { opacity: 0; filter: blur(10px); }
+      to { opacity: 1; filter: blur(0); }
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        overflow-y: auto;
+      }
+      .sketchfab-embed-wrapper {
+        height: 50vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="page-title">Kawasaki Ninja H2</h1>
+
+  <div class="container">
+    <!-- Panel izquierdo -->
+    <div class="info-panel">
+      <div class="card">
+        <h3>Motor</h3>
+        <p>998cc, 4 cilindros en línea, sobrealimentado</p>
+      </div>
+      <div class="card">
+        <h3>Potencia Máxima</h3>
+        <p>231 PS @ 11,500 rpm</p>
+      </div>
+      <div class="card">
+        <h3>Torque</h3>
+        <p>141.7 Nm @ 11,000 rpm</p>
+      </div>
+      <div class="card">
+        <h3>Transmisión</h3>
+        <p>6 velocidades con Quick Shifter bidireccional</p>
+      </div>
+      <div class="card">
+        <h3>Frenos</h3>
+        <p>Brembo con ABS inteligente</p>
+      </div>
+    </div>
+
+    <!-- Modelo 3D -->
+    <div class="sketchfab-embed-wrapper">
+      <iframe title="Kawasaki Ninja H2 [free]" frameborder="0" allowfullscreen
+        mozallowfullscreen="true" webkitallowfullscreen="true"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        loading="eager"
+        src="https://sketchfab.com/models/0ab38d6e39664b25bfaf9f5c3e0c767c/embed">
+      </iframe>
+    </div>
+
+    <!-- Panel derecho -->
+    <div class="info-panel">
+      <div class="card">
+        <h3>Supercargador</h3>
+        <p>Desarrollado por Kawasaki Heavy Industries</p>
+      </div>
+      <div class="card">
+        <h3>Chasis</h3>
+        <p>Estructura de enrejado de acero de alta resistencia</p>
+      </div>
+      <div class="card">
+        <h3>Suspensiones</h3>
+        <p>Öhlins de alto rendimiento</p>
+      </div>
+      <div class="card">
+        <h3>Electrónica</h3>
+        <p>Control de tracción (KTRC), Control de lanzamiento (KLCM)</p>
+      </div>
+      <div class="card">
+        <h3>Pintura</h3>
+        <p>Altamente duradera con un brillo único</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
